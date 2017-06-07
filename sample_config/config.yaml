@@ -1,0 +1,11 @@
+---
+common:
+  screenshot_folder: /tmp/shots
+urls:
+  -
+    name: "Google Search"
+    url: "https://www.google.com"
+
+  -
+    name: "Yahoo Search"
+    url: "https://www.yahoo.com"
