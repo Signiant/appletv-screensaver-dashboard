@@ -12,6 +12,10 @@ def take_shot(driver,url,filename):
 def take_shots(driver,config_map):
     base_filename_path = os.path.join(config_map['common']['screenshot_folder'], '')
 
+    if not os.path.isdir(base_filename_path):
+        print base_filename_path + " does not exist - creating"
+        os.makedirs(base_filename_path)
+
     for url in config_map['urls']:
         filename = base_filename_path + url['name'].replace(" ", "_") + ".png"
         print "Snapshotting url " + url['url'] + " to filename " + filename
