@@ -51,7 +51,9 @@ else
 		delay 2
 		
 		import imageList into (album named albumName) skip check duplicates yes
-		
+
+		delay 2
+		quit
 	end tell
 	
 end if
