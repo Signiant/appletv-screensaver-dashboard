@@ -20,6 +20,9 @@ def take_shots(driver,config_map):
         filename = base_filename_path + url['name'].replace(" ", "_") + ".png"
         print "Snapshotting url " + url['url'] + " to filename " + filename
 
+        if os.path.exists(filename):
+            os.remove(filename)
+
         take_shot(driver,url['url'],filename)
 
 def init_selenium():
